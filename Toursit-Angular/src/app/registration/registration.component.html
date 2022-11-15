@@ -1,0 +1,87 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<div style="text-align: center">
+    
+
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="Name"><span class="req"> </span> ID <small></small> </label>
+                        <input  type="text" [(ngModel)]="user.id" name="id" id="name" 
+                            class="form-control phone" maxlength="28" placeholder="Enter your id"required pattern="[0-9]*"maxlength="4"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req"> </span> First Name <small></small> </label>
+                        <input  type="text" [(ngModel)]="user.firstName" name="firstName" id="name" 
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..."pattern="[a-zA-Z]+" maxlength="15"required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Name"><span class="req"> </span> Last Name <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.lastName" name="lastName" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..."pattern="[a-zA-Z]+"maxlemgth="12"required />
+                    </div>
+
+                    <label for="Name"><span class="req"></span> Gender: <small></small> </label><br>
+                        &nbsp;
+                        <label class>
+                            
+                            <input type="radio" name="options" id="option1" value="male" 
+                            [(ngModel)]="user.gender"> MALE
+                            </label>
+                            &nbsp;
+                            &nbsp;
+                            <label >
+                            <input type="radio" name="options" id="option2" value="female" 
+                            [(ngModel)]="user.gender"> FEMALE
+                            </label>
+                            &nbsp;
+                            &nbsp;
+                            <label >
+                            <input type="radio" name="options" id="option3" value="OTHERS" 
+                            [(ngModel)]="user.gender"> OTHERS
+                            </label>
+                            <div id="errLast"></div>
+                            
+
+                    <div class="form-group">
+                        <label for="gender"><span class="req"></span> Age </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.age" name="age" id="txt"
+                            placeholder="Enter your gender"pattern="[0-9]{1,2}"max="90" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mark"><span class="req"> </span> Place </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.fromPlace" name="fromplace"
+                            id="mark" placeholder="Enter number of days"required pattern="[a-zA-Z]+" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mark"><span class="req"> </span> No of Days </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.noOfDays" name="noOfDays"
+                            id="mark" placeholder="Enter your place" required pattern="[0-9]+"/>
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
